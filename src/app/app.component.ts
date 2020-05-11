@@ -1,21 +1,23 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { AppService } from './Services/httpservice.service';
+import { HttpService } from './Services/httpservice.service';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { Title } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnDestroy {
 
-  constructor(private appService: AppService) {
+  constructor(private appService: HttpService, public titleService: Title) {
+    this.setTitle();
   }
-
-  title = 'angular-nodejs-example';
-
+  title = 'Alexandra\'s Site';
   userForm = new FormGroup({
     firstName: new FormControl('', Validators.nullValidator && Validators.required),
     lastName: new FormControl('', Validators.nullValidator && Validators.required),
@@ -26,7 +28,6 @@ export class AppComponent implements OnDestroy {
   userCount = 0;
 
   destroy$: Subject<boolean> = new Subject<boolean>();
-
   onSubmit() {
     this.appService.addUser(this.userForm.value).pipe(takeUntil(this.destroy$)).subscribe(data => {
       console.log('message::::', data);
@@ -41,7 +42,9 @@ export class AppComponent implements OnDestroy {
       this.users = users;
     });
   }
-
+  public setTitle() {
+    this.titleService.setTitle( this.title );
+  }
   ngOnDestroy() {
     this.destroy$.next(true);
     this.destroy$.unsubscribe();
