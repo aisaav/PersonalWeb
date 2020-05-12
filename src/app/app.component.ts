@@ -16,7 +16,7 @@ import {OverlayContainer} from '@angular/cdk/overlay';
 export class AppComponent implements OnDestroy {
 
   constructor(private appService: HttpService, public titleService: Title, overlayContainer: OverlayContainer) {
-    overlayContainer.getContainerElement().classList.add('unicorn-dark-theme');
+    overlayContainer.getContainerElement().classList.add('app-theme');
     this.setTitle();
   }
   title = 'Alexandra\'s Site';
