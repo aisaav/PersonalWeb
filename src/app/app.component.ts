@@ -4,6 +4,7 @@ import { HttpService } from './Services/httpservice.service';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { Title } from '@angular/platform-browser';
+import {OverlayContainer} from '@angular/cdk/overlay';
 
 
 @Component({
@@ -14,7 +15,8 @@ import { Title } from '@angular/platform-browser';
 
 export class AppComponent implements OnDestroy {
 
-  constructor(private appService: HttpService, public titleService: Title) {
+  constructor(private appService: HttpService, public titleService: Title, overlayContainer: OverlayContainer) {
+    overlayContainer.getContainerElement().classList.add('unicorn-dark-theme');
     this.setTitle();
   }
   title = 'Alexandra\'s Site';
