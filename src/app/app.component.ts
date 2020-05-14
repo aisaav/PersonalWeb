@@ -1,10 +1,11 @@
-import { Component, OnDestroy } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpService } from './Services/httpservice.service';
 import { takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 import { Title } from '@angular/platform-browser';
 import {OverlayContainer} from '@angular/cdk/overlay';
+import {ThemeService} from './Services/theme.service';
 
 
 @Component({
@@ -13,9 +14,11 @@ import {OverlayContainer} from '@angular/cdk/overlay';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnDestroy {
+export class AppComponent implements OnInit,OnDestroy {
+  isDarkTheme: Observable<boolean>;
 
-  constructor(private appService: HttpService, public titleService: Title, overlayContainer: OverlayContainer) {
+  constructor(private appService: HttpService, public titleService: Title, overlayContainer: OverlayContainer,
+              private themeService: ThemeService) {
     overlayContainer.getContainerElement().classList.add('app-theme');
     this.setTitle();
   }
@@ -46,6 +49,9 @@ export class AppComponent implements OnDestroy {
   }
   public setTitle() {
     this.titleService.setTitle( this.title );
+  }
+  ngOnInit(){
+    this.isDarkTheme = this.themeService.isDarkTheme;
   }
   ngOnDestroy() {
     this.destroy$.next(true);

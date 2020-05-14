@@ -10,8 +10,20 @@
 .nav{
   margin-left: auto;
 }
-
+.icon{
+  margin-left:auto;
+}
 .toolbar {
   position: fixed;
   z-index:2;
 }
+.pageName{
+  position: relative;
+  align-content: center;
+  margin-left: 10px;
+}
+.secondHeader{
+  position: relative;
+  font-family: header-font;
+}
+
