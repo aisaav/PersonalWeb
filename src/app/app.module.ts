@@ -7,18 +7,33 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {RouterModule} from '@angular/router';
+import {AppRoutingModule} from './app-routing/app-routing.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainHeaderComponent
+    MainHeaderComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    MatButtonModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
