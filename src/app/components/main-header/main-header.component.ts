@@ -8,17 +8,19 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class MainHeaderComponent implements OnInit {
   @Output() themeChanged = new EventEmitter<boolean>();
   isDark: boolean;
+  menuOpen: boolean;
   fillerNav = Array.of<string>('app-about', 'app-social', 'app-professional', 'app-hobbies-interests');
 
   constructor() {
     this.isDark = false;
+    this.menuOpen = false;
   }
 
   ngOnInit(): void {
 
   }
   onMenuClick(){
-
+    this.menuOpen = !this.menuOpen;
   }
   onDisplayModeClicked(){
     this.isDark = !this.isDark;

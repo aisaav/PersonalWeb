@@ -4,8 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MainHeaderComponent } from './main-header/main-header.component';
-import { SideNavComponent } from './side-nav/side-nav.component';
+import { MainHeaderComponent } from './components/main-header/main-header.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 
@@ -46,6 +46,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MainPageComponent } from './components/main-page/main-page.component';
 
 
 @NgModule({
@@ -90,7 +91,8 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     MatToolbarModule,
     MatTooltipModule,
     MatNativeDateModule,
-  ]
+  ],
+  declarations: [MainPageComponent]
 })
 export class MaterialModule {}
 
