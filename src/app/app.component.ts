@@ -1,11 +1,10 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, EventEmitter, HostBinding, Input, OnDestroy, OnInit} from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpService } from './Services/httpservice.service';
 import { takeUntil } from 'rxjs/operators';
 import {Observable, Subject} from 'rxjs';
 import { Title } from '@angular/platform-browser';
 import {OverlayContainer} from '@angular/cdk/overlay';
-import {ThemeService} from './Services/theme.service';
 
 
 @Component({
@@ -14,14 +13,14 @@ import {ThemeService} from './Services/theme.service';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit,OnDestroy {
-  isDarkTheme: Observable<boolean>;
-
-  constructor(private appService: HttpService, public titleService: Title, overlayContainer: OverlayContainer,
-              private themeService: ThemeService) {
-    overlayContainer.getContainerElement().classList.add('app-theme');
+export class AppComponent implements OnInit, OnDestroy {
+  constructor(private appService: HttpService, public titleService: Title, private overlayContainer: OverlayContainer) {
+    overlayContainer.getContainerElement().classList.add('default-theme');
     this.setTitle();
+
   }
+  @HostBinding('class') componentCssClass;
+
   title = 'Alexandra\'s Site';
   userForm = new FormGroup({
     firstName: new FormControl('', Validators.nullValidator && Validators.required),
@@ -33,6 +32,7 @@ export class AppComponent implements OnInit,OnDestroy {
   userCount = 0;
 
   destroy$: Subject<boolean> = new Subject<boolean>();
+
   onSubmit() {
     this.appService.addUser(this.userForm.value).pipe(takeUntil(this.destroy$)).subscribe(data => {
       console.log('message::::', data);
@@ -42,6 +42,20 @@ export class AppComponent implements OnInit,OnDestroy {
     });
   }
 
+  themeChange(): void{
+    if (this.overlayContainer.getContainerElement().classList.contains('default-theme')) {
+      this.overlayContainer.getContainerElement().classList.remove('default-theme');
+      this.overlayContainer.getContainerElement().classList.add('dark-theme');
+      this.componentCssClass = 'dark-theme';
+    } else if (this.overlayContainer.getContainerElement().classList.contains('dark-theme')) {
+      this.overlayContainer.getContainerElement().classList.remove('dark-theme');
+      this.overlayContainer.getContainerElement().classList.add('default-theme');
+      this.componentCssClass = 'default-theme';
+    } else {
+      this.overlayContainer.getContainerElement().classList.add('dark-theme');
+      this.componentCssClass = 'dark-theme';
+    }
+  }
   getAllUsers() {
     this.appService.getUsers().pipe(takeUntil(this.destroy$)).subscribe((users: any[]) => {
       this.users = users;
@@ -51,7 +65,6 @@ export class AppComponent implements OnInit,OnDestroy {
     this.titleService.setTitle( this.title );
   }
   ngOnInit(){
-    this.isDarkTheme = this.themeService.isDarkTheme;
   }
   ngOnDestroy() {
     this.destroy$.next(true);

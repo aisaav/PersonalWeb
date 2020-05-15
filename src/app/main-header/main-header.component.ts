@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import { ThemeService } from '../Services/theme.service';
-import { Observable } from 'rxjs';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-main-header',
@@ -9,20 +6,23 @@ import { Observable } from 'rxjs';
   styleUrls: ['./main-header.component.css']
 })
 export class MainHeaderComponent implements OnInit {
-  isDarkTheme: Observable<boolean>;
+  @Output() themeChanged = new EventEmitter<boolean>();
+  isDark: boolean;
   fillerNav = Array.of<string>('app-about', 'app-social', 'app-professional', 'app-hobbies-interests');
 
-  constructor(private themeService: ThemeService) { }
+  constructor() {
+    this.isDark = false;
+  }
 
   ngOnInit(): void {
-    this.isDarkTheme = this.themeService.isDarkTheme;
+
   }
   onMenuClick(){
 
   }
   onDisplayModeClicked(){
-    this.themeService.setDarkTheme(!this.isDarkTheme);
-    this.isDarkTheme = this.themeService.isDarkTheme;
+    this.isDark = !this.isDark;
+    this.themeChanged.emit(this.isDark);
   }
 
 }
