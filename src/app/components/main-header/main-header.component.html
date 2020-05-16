@@ -3,16 +3,18 @@
     <div>
       <button mat-icon-button (click)="onMenuClick()"><mat-icon>menu</mat-icon></button>
     </div>
+
     <div class="pageName">
-      <h1>Alexandra Saavedra</h1>
+      <h1 class="app-font">Alexandra Saavedra</h1>
     </div>
 
     <div class="icon">
       <button mat-icon-button (click)="onDisplayModeClicked()"><mat-icon>brightness_4</mat-icon></button>
       <a mat-icon-button routerLink=""><mat-icon>mail</mat-icon></a>
     </div>
+
     </mat-toolbar>
-  <app-side-nav [hidden]="menuOpen"></app-side-nav>
+  <app-side-nav class="nav" [hidden]="!menuOpen"></app-side-nav>
 </div>
 
 

@@ -2,10 +2,10 @@
 // Plus imports for other components in your app.
 
 $custom-typography: mat-typography-config(
-  $font-family: 'Raleway, sans-serif, light'
+  $font-family: 'Ubuntu, sans-serif'
 );
 $header-typography: mat-typography-config(
- $font-family: 'Ubuntu, sans-serif, medium'
+ $font-family: 'Raleway, sans-serif'
 );
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -64,4 +64,5 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 }
 .header-font{
   font-family: mat-font-family($header-typography);
+  font-palette: dark;
 }

@@ -8,7 +8,7 @@
   right: 0;
 }
 .nav{
-  padding: 24px;
+  position:fixed;
 }
 .icon{
   margin-left:auto;
@@ -22,8 +22,5 @@
   align-content: center;
   margin-left: 10px;
 }
-.secondHeader{
-  position: relative;
-  font-family: header-font;
-}
+
 
