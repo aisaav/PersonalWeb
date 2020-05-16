@@ -27,10 +27,9 @@ export class AppComponent implements OnInit, OnDestroy {
     lastName: new FormControl('', Validators.nullValidator && Validators.required),
     email: new FormControl('', Validators.nullValidator && Validators.required)
   });
-
   users: any[] = [];
   userCount = 0;
-
+  showMenu = false;
   destroy$: Subject<boolean> = new Subject<boolean>();
 
   onSubmit() {
@@ -55,6 +54,9 @@ export class AppComponent implements OnInit, OnDestroy {
       this.overlayContainer.getContainerElement().classList.add('dark-theme');
       this.componentCssClass = 'dark-theme';
     }
+  }
+  menuOpen(): void{
+    this.showMenu = !this.showMenu;
   }
   getAllUsers() {
     this.appService.getUsers().pipe(takeUntil(this.destroy$)).subscribe((users: any[]) => {
