@@ -8,8 +8,11 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
  <div class="mat-app-background">
     <app-main-header
-      (themeChanged) = "themeChange()"></app-main-header>
+      (themeChanged) = "themeChange()"
+      (menuOpened)="menuOpen()"></app-main-header>
+   <app-side-nav [hidden]="!showMenu"></app-side-nav>
     <div class="content">
+      <router-outlet></router-outlet>
     </div>
   </div>
 
