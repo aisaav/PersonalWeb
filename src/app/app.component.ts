@@ -3,8 +3,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpService } from './Services/httpservice.service';
 import { takeUntil } from 'rxjs/operators';
 import {Observable, Subject} from 'rxjs';
-import { Title } from '@angular/platform-browser';
+import {DomSanitizer, Title} from '@angular/platform-browser';
 import {OverlayContainer} from '@angular/cdk/overlay';
+import {MatIconRegistry} from '@angular/material/icon';
 
 
 @Component({
@@ -14,10 +15,14 @@ import {OverlayContainer} from '@angular/cdk/overlay';
 })
 
 export class AppComponent implements OnInit, OnDestroy {
-  constructor(private appService: HttpService, public titleService: Title, private overlayContainer: OverlayContainer) {
+  constructor(private appService: HttpService, public titleService: Title, private overlayContainer: OverlayContainer,
+              private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
     overlayContainer.getContainerElement().classList.add('default-theme');
     this.setTitle();
-
+    this.matIconRegistry.addSvgIcon(
+      `main_icon`,
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`../assets/ic_product_icon_192px.svg`)
+    );
   }
   @HostBinding('class') componentCssClass;
 
