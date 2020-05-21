@@ -47,6 +47,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { ContactPageComponent } from './components/contact-page/contact-page.component';
 
 
 @NgModule({
@@ -91,7 +92,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
     MatToolbarModule,
     MatTooltipModule,
     MatNativeDateModule,
-  ]
+  ],
 })
 export class MaterialModule {}
 
@@ -100,7 +101,8 @@ export class MaterialModule {}
     AppComponent,
     MainHeaderComponent,
     SideNavComponent,
-    MainPageComponent
+    MainPageComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,

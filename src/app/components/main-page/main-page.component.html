@@ -1,35 +1,100 @@
 <div class="main">
-  <div class="Welcome-message">
-    <mat-card-title>Hello</mat-card-title>
-    <div class="welcome-sub-message">
-      <mat-card-subtitle> I am Alexandra Saavedra</mat-card-subtitle>
+    <div class="welcome-message">
+      <mat-card-title>Hello</mat-card-title>
+      <div class="welcome-sub-message">
+        <mat-card-subtitle> I am Alexandra Saavedra</mat-card-subtitle>
+      </div>
     </div>
-    <div class="body">
-      <mat-grid-list cols="2" rowHeight="3:2">
-        <mat-grid-tile>
-            <img  class="main-page-image" mat-card-image src="../../../assets/headshot2.JPG" alt="headshot">
+    <div class="body-content">
+      <mat-grid-list [cols]="breakpoint" rowHeight="3:1" (window:resize)="onResize($event)">
+        <mat-grid-tile
+          [colspan]="rowpoint"
+          [rowspan]="1">
+          <h4>
+            Welcome to my site!
+            <mat-divider>
+            </mat-divider>
+          </h4>
         </mat-grid-tile>
-        <mat-grid-tile>
-          <mat-panel-title>
-            <p>
-              I am a current undergraduate at the University of Michigan
-              double majoring in Computer Science and Cognitive Science.
-            </p>
-            <h4>
-              Welcome to my site!
-            </h4>
-              <button mat-raised-button color="primary" routerLink="about-component">
-                Learn More
-              </button>
-              <button mat-raised-button color="accent" routerLink="contact-component">
-                Contact
-              </button>
-          </mat-panel-title>
+        <mat-grid-tile
+          [colspan]="1"
+          [rowspan]="breakpoint">
+          <img  class="main-page-image" mat-card-image src="../../../assets/headshot2.JPG" alt="headshot">
         </mat-grid-tile>
+        <mat-grid-tile
+          [colspan]="rowpoint"
+          [rowspan]="1">
+          <p class="app-font">
+            I am a current undergraduate at the University of Michigan
+            <br>double majoring in Computer Science and Cognitive Science.
+            <br>
+            Feel free to use the menu to navigate my site
+            <br>or click any of the links below to get the information you need.
+            <br>
+          </p>
+        </mat-grid-tile>
+        <mat-grid-tile
+          [colspan]="rowpoint"
+          [rowspan]="1">
+          <a mat-flat-button color="primary" routerLink="about-component">
+            Learn More
+          </a>
+          <mat-divider vertical="true"></mat-divider>
+          <a mat-flat-button color="accent" routerLink="contact-component">
+            Contact
+          </a>
+        </mat-grid-tile>
+
+
+
       </mat-grid-list>
     </div>
-  </div>
 </div>
-<svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
-  <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee"/>
-</svg>
+
+<div>
+  <mat-grid-list cols="5" rowHeight="4:1">
+    <input type="hidden" #selection>
+    <mat-grid-tile>
+      <button mat-raised-button (click)="selection.value = 'github'" tabindex="0">
+          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <span>Github</span>
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button (click)="selection.value = 'linkedIn'" tabindex="0">
+        <span>LinkedIn</span>
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button (click)="selection.value = 'VSCO'" tabindex="0">
+        <span>VSCO</span>
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button (click)="selection.value = 'Instagram'" tabindex="0">
+        <span>Instagram</span>
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button (click)="selection.value = 'Email'" tabindex="0">
+        <span>Email</span>
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<div class="terminal" [ngSwitch]="selection.value">
+  <a href="https://github.com/aisaav"><pre *ngSwitchDefault>github.com/aisaav</pre></a>
+  <a href="https://www.linkedin.com/in/aisaav/"><pre *ngSwitchCase="'linkedIn'">www.linkedin.com/in/aisaav/</pre></a>
+  <a href="https://vsco.co/aisaavedra/gallery"><pre *ngSwitchCase="'VSCO'">vsco.co/aisaavedra/gallery</pre></a>
+  <a href="https://www.instagram.com/alex_saa/?hl=en"><pre *ngSwitchCase="'Instagram'">@alex_saa</pre></a>
+  <a href=""><pre *ngSwitchCase="'Email'">aisaav@umich.edu</pre></a>
+</div>
+
+<footer class="center">
+  <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
+    <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee"/>
+  </svg>
+</footer>
+
+
