@@ -20,9 +20,13 @@ svg#clouds {
   z-index: -10;
   width: 1920px;
 }
-
+.scroll-text{
+  float: inside;
+  margin-right: auto;
+  margin-left: auto;
+}
 footer {
-  margin: 8px;
+  margin-top: 10%;
   display: flex;
   align-items: center;
   line-height: 20px;
