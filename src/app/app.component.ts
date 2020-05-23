@@ -36,7 +36,6 @@ export class AppComponent implements OnInit, OnDestroy {
   userCount = 0;
   showMenu = false;
   destroy$: Subject<boolean> = new Subject<boolean>();
-
   onSubmit() {
     this.appService.addUser(this.userForm.value).pipe(takeUntil(this.destroy$)).subscribe(data => {
       console.log('message::::', data);
