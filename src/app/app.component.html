@@ -11,7 +11,7 @@
      <app-main-header
        (themeChanged) = "themeChange()"
        (menuOpened)="menuOpen()"></app-main-header>
-       <mat-sidenav-container class="nav-and-content" fullscreen [style.marginTop.px]="64" >
+       <mat-sidenav-container class="nav-and-content" fullscreen [style.marginTop.px]="55">
          <mat-sidenav [opened]="showMenu" role="navigation" fixedTopGap="64" mode="push">
            <app-side-nav [hidden]="!showMenu"></app-side-nav>
          </mat-sidenav>

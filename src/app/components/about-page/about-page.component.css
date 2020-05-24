@@ -1,0 +1,11 @@
+.about-me-page{
+  align-content: center;
+}
+
+header{
+  float: none;
+}
+
+header .about-header{
+  text-align: center;
+}
