@@ -3,6 +3,9 @@
 }
 .background{
   position: absolute;
+  object-fit: cover;
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
   z-index: -2;
 }
 
@@ -23,19 +26,20 @@
 svg#clouds {
   position: absolute;
   bottom: -25%;
-  left: -230px;
+  left:-0.3%;
   z-index: -10;
-  width: 1920px;
+  width:100%;
 }
 .scroll-text{
   position: sticky;
   float: inside;
+  bottom:-15%;
   margin-right: auto;
   margin-left: auto;
 }
 footer {
-  margin-top: 10%;
   display: flex;
+  margin-top:6%;
   align-items: center;
   line-height: 20px;
 }
@@ -44,6 +48,7 @@ footer {
 header{
   width: 98%;
   float: none;
+  margin-top: 3%;
 }
 
 header .profilePhoto {
@@ -55,7 +60,6 @@ header .profilePhoto {
 
 header .profileHeader {
   text-align: left;
-  margin-top: 3%;
   display: table;
 }
 
@@ -137,11 +141,12 @@ header .terminal-container{
   z-index: 3;
   width: 100px;
   height:80px;
-  margin-left: 3%;
   box-sizing: content-box;
   position: absolute;
 }
 
 .space-before{
-  padding-top: 30%;
+  position: absolute;
+  bottom: -25%;
+  padding-left: 2%;
 }
