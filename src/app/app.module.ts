@@ -48,6 +48,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
+import { AboutPageComponent } from './components/about-page/about-page.component';
 
 
 @NgModule({
@@ -102,7 +103,8 @@ export class MaterialModule {}
     MainHeaderComponent,
     SideNavComponent,
     MainPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,

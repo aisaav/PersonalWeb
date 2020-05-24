@@ -6,7 +6,7 @@ import {Observable, Subject} from 'rxjs';
 import {DomSanitizer, Title} from '@angular/platform-browser';
 import {OverlayContainer} from '@angular/cdk/overlay';
 import {MatIconRegistry} from '@angular/material/icon';
-
+import { ImageThemeService } from './Services/image-theme-service.service';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,9 @@ import {MatIconRegistry} from '@angular/material/icon';
 
 export class AppComponent implements OnInit, OnDestroy {
   constructor(private appService: HttpService, public titleService: Title, private overlayContainer: OverlayContainer,
-              private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
+              private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer,
+              public imageThemer: ImageThemeService) {
+    imageThemer = new ImageThemeService();
     overlayContainer.getContainerElement().classList.add('default-theme');
     this.setTitle();
     this.matIconRegistry.addSvgIcon(
@@ -50,13 +52,16 @@ export class AppComponent implements OnInit, OnDestroy {
       this.overlayContainer.getContainerElement().classList.remove('default-theme');
       this.overlayContainer.getContainerElement().classList.add('dark-theme');
       this.componentCssClass = 'dark-theme';
+      this.imageThemer.themeChangedToDark();
     } else if (this.overlayContainer.getContainerElement().classList.contains('dark-theme')) {
       this.overlayContainer.getContainerElement().classList.remove('dark-theme');
       this.overlayContainer.getContainerElement().classList.add('default-theme');
       this.componentCssClass = 'default-theme';
+      this.imageThemer.themeChangedToDefault();
     } else {
       this.overlayContainer.getContainerElement().classList.add('dark-theme');
       this.componentCssClass = 'dark-theme';
+      this.imageThemer.themeChangedToDark();
     }
   }
   menuOpen(): void{

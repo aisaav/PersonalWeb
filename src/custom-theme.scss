@@ -69,6 +69,18 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   font-palette: dark;
 }
 
+.darken-img-slight{
+  filter: brightness(85%);
+}
+.darken-img-alot{
+  filter: brightness(75%);
+}
+.lighten-img-alot{
+  filter:brightness(125%);
+}
+.lighten-img-slightly{
+  filter:brightness(115%);
+}
 
 
 
