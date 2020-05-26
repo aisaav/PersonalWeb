@@ -147,6 +147,7 @@ header .terminal-container{
 
 .space-before{
   position: absolute;
-  bottom: -25%;
-  padding-left: 2%;
+  padding-top: 30%;
+  width: 100%;
 }
+
