@@ -1,3 +1,15 @@
+.about{
+  padding-left: 2%;
+}
+.background{
+  position: absolute;
+  object-fit: cover;
+  -webkit-mask-image:-webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+  opacity: 25%;
+  z-index: -2;
+}
+
 .about-me-page{
   align-content: center;
 }
@@ -8,4 +20,43 @@ header{
 
 header .about-header{
   text-align: center;
+}
+
+.main{
+  padding-left: 2%;
+  width:75%;
+}
+
+.content{
+  text-align: center;
+}
+
+.fun-facts{
+  padding-top: 5%;
+  width: 20%;
+  position: absolute;
+  left: 80%;
+  text-align: center;
+}
+
+.facts {
+  width: 50%;
+  text-align: center;
+  word-wrap: normal;
+}
+
+.fact-container{
+  position: relative;
+  margin-top:5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.fact-container .facts:not(.highlight-card):hover{
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+.button-container{
+  padding-top: 5%;
 }
