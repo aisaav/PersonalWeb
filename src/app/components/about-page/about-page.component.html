@@ -1,17 +1,6 @@
 <img class="background" src="../../../assets/about-page-background.svg" alt="" width="100%" height="100%"/>
 <div>
   <div class="about-me-page">
-    <div class="fun-facts">
-      <h2 class="mat-h2">
-        Fun Facts!
-      </h2>
-      <div class="fact-container" *ngFor="let fact of displayedFunFacts">
-        <mat-card class="facts">{{fact}}</mat-card>
-      </div>
-      <div class="button-container">
-        <button class="mat-icon-button" (click)="pickFunFactsToDisplay()"><mat-icon>refresh</mat-icon></button>
-      </div>
-    </div>
     <div class="main">
       <header>
         <section class="about-header">
@@ -47,6 +36,7 @@
         </h2>
       </div>
       <div class="additional">
+        <img class="arrows" src="../../../assets/about%20me%20page%20arrows.svg" />
         <div class="social">
           <a>
 
@@ -62,7 +52,6 @@
 
           </a>
         </div>
-        Thank you for visiting, and I hope to stay in touch!
       </div>
     </div>
   </div>

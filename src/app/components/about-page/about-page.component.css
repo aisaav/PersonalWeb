@@ -24,39 +24,31 @@ header .about-header{
 
 .main{
   padding-left: 2%;
-  width:75%;
+  width:98%;
 }
 
 .content{
   text-align: center;
 }
 
-.fun-facts{
-  padding-top: 5%;
-  width: 20%;
-  position: absolute;
-  left: 80%;
-  text-align: center;
-}
 
-.facts {
-  width: 50%;
-  text-align: center;
-  word-wrap: normal;
-}
-
-.fact-container{
-  position: relative;
-  margin-top:5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease-in-out;
-}
 
 .fact-container .facts:not(.highlight-card):hover{
   box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
 }
 .button-container{
   padding-top: 5%;
+}
+
+.additional{
+  width:98%;
+  align-items: center;
+  align-content: center;
+}
+
+.arrows{
+  width:50%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
