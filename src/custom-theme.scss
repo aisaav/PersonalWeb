@@ -82,5 +82,8 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   filter:brightness(115%);
 }
 
+.icon-color-flip{
+  filter: brightness(1500%);
+}
 
 

@@ -7,6 +7,7 @@ import {DomSanitizer, Title} from '@angular/platform-browser';
 import {OverlayContainer} from '@angular/cdk/overlay';
 import {MatIconRegistry} from '@angular/material/icon';
 import { ImageThemeService } from './Services/image-theme-service.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ import { ImageThemeService } from './Services/image-theme-service.service';
 })
 
 export class AppComponent implements OnInit, OnDestroy {
+  name;
   constructor(private appService: HttpService, public titleService: Title, private overlayContainer: OverlayContainer,
               private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer,
               public imageThemer: ImageThemeService) {
@@ -76,6 +78,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.titleService.setTitle( this.title );
   }
   ngOnInit(){
+
   }
   ngOnDestroy() {
     this.destroy$.next(true);

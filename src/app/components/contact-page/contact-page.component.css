@@ -1,0 +1,56 @@
+.background{
+  position: absolute;
+  object-fit: cover;
+  opacity:50%;
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+  z-index: -2;
+}
+.contact-page{
+  margin-top: 3%;
+  text-align: center;
+  align-content: center;
+}
+
+.contact-links{
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.link{
+  width:95%;
+  padding: 2%;
+  alignment: center;
+}
+
+.icon{
+  width: 30px;
+  height: 30px;
+  padding: 15px;
+}
+
+.li-icon{
+  height: 30px;
+  width: 35px;
+  padding: 15px;
+}
+
+.link-container{
+  align-items: center;
+  display: flex;
+  vertical-align: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link-styling{
+  text-decoration: none;
+}
+.ig-icon{
+  width: 40px;
+  height:40px;
+  padding: 10px;
+}

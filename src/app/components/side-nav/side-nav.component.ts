@@ -7,24 +7,24 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SideNavComponent implements OnInit{
 
-  fillerNav = Array.of<string>( 'app-main-page','app-social', 'app-professional', 'app-hobbies-interests', 'contact-page');
+  fillerNav = Array.of<string>( 'home-page', 'extracurricular-page', 'professional-page', 'hobbies-interests-page', 'contact-page');
 
   constructor() {
   }
   getDisplayName(nav: string){
-    if (nav === 'app-social'){
-      return 'Social';
+    if (nav === 'extracurricular-page'){
+      return 'Extracurricular';
     }
-    else if (nav === 'app-professional'){
+    else if (nav === 'professional-page'){
       return 'Professional';
     }
-    else if (nav === 'app-hobbies-interests'){
+    else if (nav === 'hobbies-interests-page'){
       return 'Hobbies/Interests';
     }
     else if (nav === 'contact-page'){
       return 'Contact';
     }
-    else if (nav === 'app-main-page'){
+    else if (nav === 'home-page'){
       return 'Home';
     }
     return '';
