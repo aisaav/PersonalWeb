@@ -7,12 +7,19 @@ import {DomSanitizer, Title} from '@angular/platform-browser';
 import {OverlayContainer} from '@angular/cdk/overlay';
 import {MatIconRegistry} from '@angular/material/icon';
 import { ImageThemeService } from './Services/image-theme-service.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, RouterOutlet} from '@angular/router';
+import {animate, group, query, style, transition, trigger} from '@angular/animations';
+import {ContactPageComponent} from './components/contact-page/contact-page.component';
+import {MainHeaderComponent} from './components/main-header/main-header.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations: [
+    trigger('routeAnimations', [
+    ])
+  ]
 })
 
 export class AppComponent implements OnInit, OnDestroy {
@@ -83,5 +90,9 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.destroy$.next(true);
     this.destroy$.unsubscribe();
+  }
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet.activatedRouteData.animation || '';
   }
 }

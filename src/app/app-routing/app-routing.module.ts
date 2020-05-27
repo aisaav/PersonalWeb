@@ -11,12 +11,12 @@ const appRoutes: Routes = [
   { path: 'home-page',
     pathMatch: 'full',
     redirectTo: ''},
-  {path: '', component: MainPageComponent},
-  {path: 'contact-page', component: ContactPageComponent},
-  {path: 'extracurricular-page', component: ExtracurricularPageComponent},
-  {path: 'hobbies-interests-page', component: HobbiesInterestsPageComponent},
-  {path: 'professional-page', component: ProfessionalPageComponent},
-  {path: '**', component: MainPageComponent}
+  {path: '', component: MainPageComponent, data: {animation: 'MainPageComponent'}},
+  {path: 'contact-page', component: ContactPageComponent, data: {animation: 'ContactPageComponent'}},
+  {path: 'extracurricular-page', component: ExtracurricularPageComponent, data: {animation: 'ExtracurricularPageComponent'}},
+  {path: 'hobbies-interests-page', component: HobbiesInterestsPageComponent, data: {animation: 'HobbiesInterestsPageComponent'}},
+  {path: 'professional-page', component: ProfessionalPageComponent, data: {animation: 'ProfessionalPageComponent'}},
+  {path: '**', component: MainPageComponent, data: {animation: 'MainPageComponent'}}
 ];
 
 @NgModule({
