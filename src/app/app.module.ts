@@ -49,6 +49,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
 import { AboutPageComponent } from './components/about-page/about-page.component';
+import { ExtracurricularPageComponent } from './components/extracurricular-page/extracurricular-page.component';
+import { ProfessionalPageComponent } from './components/professional-page/professional-page.component';
+import { HobbiesInterestsPageComponent } from './components/hobbies-interests-page/hobbies-interests-page.component';
 
 
 @NgModule({
@@ -104,7 +107,10 @@ export class MaterialModule {}
     SideNavComponent,
     MainPageComponent,
     ContactPageComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    ExtracurricularPageComponent,
+    ProfessionalPageComponent,
+    HobbiesInterestsPageComponent
   ],
   imports: [
     BrowserModule,
