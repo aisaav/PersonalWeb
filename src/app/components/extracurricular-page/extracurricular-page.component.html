@@ -2,10 +2,60 @@
 <div class="page-container">
   <h2 class="mat-display-4" [style.font-size.px]="52">Extracurriculars</h2>
   <div class="activities">
-    <mat-list>
-      <mat-list-item>
+    <mat-tab-group color="accent" backgroundColor="primary">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          Education
+        </ng-template>
+        <div class="industry-experience">
+          <mat-accordion multi="true" >
+            <mat-expansion-panel expanded="true">
+              <mat-expansion-panel-header>
+                University of Michigan
+              </mat-expansion-panel-header>
 
-      </mat-list-item>
-    </mat-list>
+              <ng-template matExpansionPanelContent>
+
+              </ng-template>
+            </mat-expansion-panel>
+            <mat-expansion-panel expanded="true">
+              <mat-expansion-panel-header>
+                Cypress Bay High School
+              </mat-expansion-panel-header>
+              <ng-template matExpansionPanelContent>
+
+              </ng-template>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          Extracurriculars
+        </ng-template>
+        <div class="research-experience">
+          <mat-accordion multi="true" >
+            <mat-expansion-panel expanded="true">
+              <mat-expansion-panel-header>
+                SHPE
+              </mat-expansion-panel-header>
+
+              <ng-template matExpansionPanelContent>
+
+              </ng-template>
+            </mat-expansion-panel>
+            <mat-expansion-panel expanded="true">
+              <mat-expansion-panel-header>
+                MRADS
+              </mat-expansion-panel-header>
+
+              <ng-template matExpansionPanelContent>
+
+              </ng-template>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
   </div>
 </div>

@@ -13,13 +13,13 @@ export class SideNavComponent implements OnInit{
   }
   getDisplayName(nav: string){
     if (nav === 'extracurricular-page'){
-      return 'Extracurricular';
+      return 'Education and Extracurriculars';
     }
     else if (nav === 'professional-page'){
-      return 'Professional';
+      return 'Experience';
     }
     else if (nav === 'hobbies-interests-page'){
-      return 'Hobbies/Interests';
+      return 'Hobbies and Interests';
     }
     else if (nav === 'contact-page'){
       return 'Contact';

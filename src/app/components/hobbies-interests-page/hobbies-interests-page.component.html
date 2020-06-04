@@ -2,10 +2,52 @@
 <div class="page-container">
   <h2 class="mat-display-4" [style.font-size.px]="52">Hobbies and Interests</h2>
   <div class="activities">
-    <mat-list>
-      <mat-list-item>
+    <mat-tab-group color="accent" backgroundColor="primary">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          Hobbies
+        </ng-template>
+        <div class="industry-experience">
+          <mat-accordion multi="true" >
+            <mat-expansion-panel expanded="true">
+              <mat-expansion-panel-header>
+                Art
+              </mat-expansion-panel-header>
 
-      </mat-list-item>
-    </mat-list>
+              <ng-template matExpansionPanelContent>
+
+              </ng-template>
+            </mat-expansion-panel>
+            <mat-expansion-panel expanded="true">
+              <mat-expansion-panel-header>
+                Fitness
+              </mat-expansion-panel-header>
+              <ng-template matExpansionPanelContent>
+
+              </ng-template>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          Interests
+        </ng-template>
+        <div class="research-experience">
+          <mat-accordion multi="true" >
+            <mat-expansion-panel expanded="true">
+              <mat-expansion-panel-header>
+                Computational cognition
+              </mat-expansion-panel-header>
+
+              <ng-template matExpansionPanelContent>
+
+              </ng-template>
+            </mat-expansion-panel>
+
+          </mat-accordion>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
   </div>
 </div>

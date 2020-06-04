@@ -3,39 +3,57 @@
 
     <h2 class="mat-display-4" [style.font-size.px]="52" [style.margin-bottom.px]="6">Experience</h2>
 
-  <mat-tab-group color="accent" >
+  <mat-tab-group color="accent" backgroundColor="primary">
     <mat-tab>
       <ng-template mat-tab-label>
-        Industry Experience
+        Industry
       </ng-template>
       <div class="industry-experience">
-        <mat-card>
-          <mat-list>
-            <mat-list-item>
-              Current Software Engineer Intern at American Express
-            </mat-list-item>
-            <mat-list-item>
-              Previous Software Engineer Intern at QuickenLoans
-            </mat-list-item>
-          </mat-list>
-        </mat-card>
+        <mat-accordion multi="true" >
+          <mat-expansion-panel expanded="true">
+            <mat-expansion-panel-header>
+              Software Developer Intern at American Express
+            </mat-expansion-panel-header>
+
+            <ng-template matExpansionPanelContent>
+              <app-professional-amex></app-professional-amex>
+            </ng-template>
+          </mat-expansion-panel>
+            <mat-expansion-panel expanded="true">
+              <mat-expansion-panel-header>
+                Software Developer Intern at Quicken Loans
+              </mat-expansion-panel-header>
+              <ng-template matExpansionPanelContent>
+                <app-professional-quicken></app-professional-quicken>
+              </ng-template>
+            </mat-expansion-panel>
+        </mat-accordion>
       </div>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        Research Experience
+        Research
       </ng-template>
       <div class="research-experience">
-        <mat-card>
-          <mat-list>
-            <mat-list-item>
-              Machine Learning for Biological Research
-            </mat-list-item>
-            <mat-list-item>
-              Effects on Bootstrap Sampling
-            </mat-list-item>
-          </mat-list>
-        </mat-card>
+        <mat-accordion multi="true" >
+          <mat-expansion-panel expanded="true">
+            <mat-expansion-panel-header>
+              Undergraduate Researcher - Machine Learning for Biological Research
+            </mat-expansion-panel-header>
+
+            <ng-template matExpansionPanelContent>
+              <app-professional-research-mrads></app-professional-research-mrads>
+            </ng-template>
+          </mat-expansion-panel>
+          <mat-expansion-panel expanded="true">
+            <mat-expansion-panel-header>
+              Research Prior to Undergrad - Bootstrap Sampling for Determining Diffusivity
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent>
+              <app-professional-quicken></app-professional-quicken>
+            </ng-template>
+          </mat-expansion-panel>
+        </mat-accordion>
       </div>
     </mat-tab>
     <mat-tab>
@@ -43,13 +61,25 @@
         Technical
       </ng-template>
       <div class="technical-skills">
-        <mat-card>
-          <mat-list>
-            <mat-list-item>
+        <mat-accordion multi="true" >
+          <mat-expansion-panel expanded="true">
+            <mat-expansion-panel-header>
+              Skills
+            </mat-expansion-panel-header>
 
-            </mat-list-item>
-          </mat-list>
-        </mat-card>
+            <ng-template matExpansionPanelContent>
+              <app-professional-technical-skills></app-professional-technical-skills>
+            </ng-template>
+          </mat-expansion-panel>
+          <mat-expansion-panel expanded="true">
+            <mat-expansion-panel-header>
+              Projects and Setups
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent>
+              <app-professional-technical-projects-and-setups></app-professional-technical-projects-and-setups>
+            </ng-template>
+          </mat-expansion-panel>
+        </mat-accordion>
       </div>
     </mat-tab>
   </mat-tab-group>

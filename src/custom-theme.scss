@@ -88,3 +88,8 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 .mat-tab-label.mat-tab-label-active{
   opacity: 1 !important;
 }
+
+.mat-accordion .mat-expansion-panel{
+  border-radius: 0 !important;
+}
+
