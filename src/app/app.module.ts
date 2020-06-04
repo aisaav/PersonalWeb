@@ -52,6 +52,12 @@ import { AboutPageComponent } from './components/about-page/about-page.component
 import { ExtracurricularPageComponent } from './components/extracurricular-page/extracurricular-page.component';
 import { ProfessionalPageComponent } from './components/professional-page/professional-page.component';
 import { HobbiesInterestsPageComponent } from './components/hobbies-interests-page/hobbies-interests-page.component';
+import { ProfessionalQuickenComponent } from './components/professional-page/professional-quicken/professional-quicken.component';
+import { ProfessionalAmexComponent } from './components/professional-page/professional-amex/professional-amex.component';
+import { ProfessionalResearchMradsComponent } from './components/professional-page/professional-research-mrads/professional-research-mrads.component';
+import { ProfessionalResearchYspComponent } from './components/professional-page/professional-research-ysp/professional-research-ysp.component';
+import { ProfessionalTechnicalSkillsComponent } from './components/professional-page/professional-technical-skills/professional-technical-skills.component';
+import { ProfessionalTechnicalProjectsAndSetupsComponent } from './components/professional-page/professional-technical-projects-and-setups/professional-technical-projects-and-setups.component';
 
 
 @NgModule({
@@ -110,6 +116,12 @@ export class MaterialModule {}
     AboutPageComponent,
     ExtracurricularPageComponent,
     ProfessionalPageComponent,
+      ProfessionalQuickenComponent,
+      ProfessionalAmexComponent,
+      ProfessionalResearchMradsComponent,
+      ProfessionalResearchYspComponent,
+      ProfessionalTechnicalSkillsComponent,
+      ProfessionalTechnicalProjectsAndSetupsComponent,
     HobbiesInterestsPageComponent
   ],
   imports: [

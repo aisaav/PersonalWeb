@@ -85,5 +85,6 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 .icon-color-flip{
   filter: brightness(1500%);
 }
-
-
+.mat-tab-label.mat-tab-label-active{
+  opacity: 1 !important;
+}
