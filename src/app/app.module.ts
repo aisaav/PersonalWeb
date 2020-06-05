@@ -58,6 +58,12 @@ import { ProfessionalResearchMradsComponent } from './components/professional-pa
 import { ProfessionalResearchYspComponent } from './components/professional-page/professional-research-ysp/professional-research-ysp.component';
 import { ProfessionalTechnicalSkillsComponent } from './components/professional-page/professional-technical-skills/professional-technical-skills.component';
 import { ProfessionalTechnicalProjectsAndSetupsComponent } from './components/professional-page/professional-technical-projects-and-setups/professional-technical-projects-and-setups.component';
+import { HobbyArtComponent } from './components/hobbies-interests-page/hobby-art/hobby-art.component';
+import { HobbyFitnessComponent } from './components/hobbies-interests-page/hobby-fitness/hobby-fitness.component';
+import { HobbyMusicComponent } from './components/hobbies-interests-page/hobby-music/hobby-music.component';
+import { InterestComputationalCognitionComponent } from './components/hobbies-interests-page/interest-computational-cognition/interest-computational-cognition.component';
+import { InterestAiApproachesComponent } from './components/hobbies-interests-page/interest-ai-approaches/interest-ai-approaches.component';
+import { InterestAiApplicationsComponent } from './components/hobbies-interests-page/interest-ai-applications/interest-ai-applications.component';
 
 
 @NgModule({
@@ -102,7 +108,14 @@ import { ProfessionalTechnicalProjectsAndSetupsComponent } from './components/pr
     MatToolbarModule,
     MatTooltipModule,
     MatNativeDateModule,
+    HobbyArtComponent,
+    HobbyFitnessComponent,
+    HobbyMusicComponent,
+    InterestComputationalCognitionComponent,
+    InterestAiApproachesComponent,
+    InterestAiApplicationsComponent,
   ],
+  declarations: [HobbyArtComponent, HobbyFitnessComponent, HobbyMusicComponent, InterestComputationalCognitionComponent, InterestAiApproachesComponent, InterestAiApplicationsComponent],
 })
 export class MaterialModule {}
 

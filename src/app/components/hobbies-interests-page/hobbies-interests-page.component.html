@@ -14,7 +14,7 @@
               </mat-expansion-panel-header>
 
               <ng-template matExpansionPanelContent>
-
+                <app-hobby-art></app-hobby-art>
               </ng-template>
             </mat-expansion-panel>
             <mat-expansion-panel expanded="true">
@@ -22,7 +22,15 @@
                 Fitness
               </mat-expansion-panel-header>
               <ng-template matExpansionPanelContent>
-
+                <app-hobby-fitness></app-hobby-fitness>
+              </ng-template>
+            </mat-expansion-panel>
+            <mat-expansion-panel expanded="true">
+              <mat-expansion-panel-header>
+                Exploring Music
+              </mat-expansion-panel-header>
+              <ng-template matExpansionPanelContent>
+                <app-hobby-music></app-hobby-music>
               </ng-template>
             </mat-expansion-panel>
           </mat-accordion>
@@ -36,11 +44,29 @@
           <mat-accordion multi="true" >
             <mat-expansion-panel expanded="true">
               <mat-expansion-panel-header>
-                Computational cognition
+                Computation and Cognition
               </mat-expansion-panel-header>
 
               <ng-template matExpansionPanelContent>
+                <app-interest-computational-cognition></app-interest-computational-cognition>
+              </ng-template>
+            </mat-expansion-panel>
+            <mat-expansion-panel expanded="true">
+              <mat-expansion-panel-header>
+                Approaches to Artificial Intelligence
+              </mat-expansion-panel-header>
 
+              <ng-template matExpansionPanelContent>
+                <app-interest-ai-approaches></app-interest-ai-approaches>
+              </ng-template>
+            </mat-expansion-panel>
+            <mat-expansion-panel expanded="true">
+              <mat-expansion-panel-header>
+                Applications of Machine Learning
+              </mat-expansion-panel-header>
+
+              <ng-template matExpansionPanelContent>
+                <app-interest-ai-applications></app-interest-ai-applications>
               </ng-template>
             </mat-expansion-panel>
           </mat-accordion>
