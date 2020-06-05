@@ -21,36 +21,39 @@
 
 .link{
   width:95%;
-  padding: 2%;
+  padding: 3%;
   alignment: center;
+
 }
 
 .icon{
   width: 30px;
   height: 30px;
   padding: 15px;
+  float:right;
 }
 
 .li-icon{
   height: 30px;
   width: 35px;
   padding: 15px;
+  float:right;
 }
 
-.link-container{
-  align-items: center;
-  display: flex;
-  vertical-align: center;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .link-styling{
-  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 0;
 }
+
+
 .ig-icon{
   width: 40px;
   height:40px;
   padding: 10px;
+  float:right;
 }

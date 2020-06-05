@@ -92,4 +92,7 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 .mat-accordion .mat-expansion-panel{
   border-radius: 0 !important;
 }
-
+a:-webkit-any-link {
+  color: inherit;
+  text-decoration: none;
+}
