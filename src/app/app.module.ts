@@ -64,6 +64,10 @@ import { HobbyMusicComponent } from './components/hobbies-interests-page/hobby-m
 import { InterestComputationalCognitionComponent } from './components/hobbies-interests-page/interest-computational-cognition/interest-computational-cognition.component';
 import { InterestAiApproachesComponent } from './components/hobbies-interests-page/interest-ai-approaches/interest-ai-approaches.component';
 import { InterestAiApplicationsComponent } from './components/hobbies-interests-page/interest-ai-applications/interest-ai-applications.component';
+import { EducationUmichComponent } from './components/extracurricular-page/education-umich/education-umich.component';
+import { EducationCbhsComponent } from './components/extracurricular-page/education-cbhs/education-cbhs.component';
+import { ExtracurricularShpeComponent } from './components/extracurricular-page/extracurricular-shpe/extracurricular-shpe.component';
+import { ExtracurricularMradsComponent } from './components/extracurricular-page/extracurricular-mrads/extracurricular-mrads.component';
 
 
 @NgModule({
@@ -108,14 +112,7 @@ import { InterestAiApplicationsComponent } from './components/hobbies-interests-
     MatToolbarModule,
     MatTooltipModule,
     MatNativeDateModule,
-    HobbyArtComponent,
-    HobbyFitnessComponent,
-    HobbyMusicComponent,
-    InterestComputationalCognitionComponent,
-    InterestAiApproachesComponent,
-    InterestAiApplicationsComponent,
-  ],
-  declarations: [HobbyArtComponent, HobbyFitnessComponent, HobbyMusicComponent, InterestComputationalCognitionComponent, InterestAiApproachesComponent, InterestAiApplicationsComponent],
+  ]
 })
 export class MaterialModule {}
 
@@ -128,6 +125,10 @@ export class MaterialModule {}
     ContactPageComponent,
     AboutPageComponent,
     ExtracurricularPageComponent,
+      EducationUmichComponent,
+      EducationCbhsComponent,
+      ExtracurricularShpeComponent,
+      ExtracurricularMradsComponent,
     ProfessionalPageComponent,
       ProfessionalQuickenComponent,
       ProfessionalAmexComponent,
@@ -135,7 +136,13 @@ export class MaterialModule {}
       ProfessionalResearchYspComponent,
       ProfessionalTechnicalSkillsComponent,
       ProfessionalTechnicalProjectsAndSetupsComponent,
-    HobbiesInterestsPageComponent
+    HobbiesInterestsPageComponent,
+      HobbyArtComponent,
+      HobbyFitnessComponent,
+      HobbyMusicComponent,
+      InterestComputationalCognitionComponent,
+      InterestAiApproachesComponent,
+      InterestAiApplicationsComponent
   ],
   imports: [
     BrowserModule,
