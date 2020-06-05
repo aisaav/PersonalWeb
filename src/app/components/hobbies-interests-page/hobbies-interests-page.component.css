@@ -10,4 +10,13 @@
 .page-container{
   padding-left: 2%;
   padding-top: 2%;
+  max-width: 95%;
+}
+
+.hobbies{
+  padding-top: 1%;
+}
+
+.interests{
+  padding-top: 1%;
 }

@@ -1,14 +1,15 @@
 <img class="background" src="../../../assets/extracurriculars-background.svg"/>
 <div class="page-container">
-  <h2 class="mat-display-4" [style.font-size.px]="52">Extracurriculars</h2>
-  <div class="activities">
+
+  <h2 class="mat-display-4" [style.font-size.px]="52" [style.margin-bottom.px]="6">Extracurriculars</h2>
+
     <mat-tab-group color="accent" backgroundColor="primary">
       <mat-tab>
         <ng-template mat-tab-label>
           Education
         </ng-template>
-        <div class="industry-experience">
-          <mat-accordion multi="true" >
+        <div class="education">
+          <mat-accordion multi="true">
             <mat-expansion-panel expanded="true">
               <mat-expansion-panel-header>
                 University of Michigan
@@ -33,7 +34,7 @@
         <ng-template mat-tab-label>
           Extracurriculars
         </ng-template>
-        <div class="research-experience">
+        <div class="extracurriculars">
           <mat-accordion multi="true" >
             <mat-expansion-panel expanded="true">
               <mat-expansion-panel-header>
@@ -57,5 +58,5 @@
         </div>
       </mat-tab>
     </mat-tab-group>
-  </div>
+
 </div>

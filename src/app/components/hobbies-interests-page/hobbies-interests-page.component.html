@@ -1,13 +1,12 @@
 <img class="background" src="../../../assets/hobbies-interests-background.svg">
 <div class="page-container">
-  <h2 class="mat-display-4" [style.font-size.px]="52">Hobbies and Interests</h2>
-  <div class="activities">
+  <h2 class="mat-display-4" [style.font-size.px]="52" [style.margin-bottom.px]="6">Hobbies and Interests</h2>
     <mat-tab-group color="accent" backgroundColor="primary">
       <mat-tab>
         <ng-template mat-tab-label>
           Hobbies
         </ng-template>
-        <div class="industry-experience">
+        <div class="hobbies">
           <mat-accordion multi="true" >
             <mat-expansion-panel expanded="true">
               <mat-expansion-panel-header>
@@ -33,7 +32,7 @@
         <ng-template mat-tab-label>
           Interests
         </ng-template>
-        <div class="research-experience">
+        <div class="interests">
           <mat-accordion multi="true" >
             <mat-expansion-panel expanded="true">
               <mat-expansion-panel-header>
@@ -44,10 +43,8 @@
 
               </ng-template>
             </mat-expansion-panel>
-
           </mat-accordion>
         </div>
       </mat-tab>
     </mat-tab-group>
-  </div>
 </div>
