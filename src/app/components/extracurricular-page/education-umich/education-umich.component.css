@@ -1,0 +1,16 @@
+.mat-body-1 internal{
+  word-wrap: break-word;
+  word-break: keep-all;
+  overflow: visible;
+  display: inline;
+}
+
+.list-item{
+  margin-top: 20px;
+
+}
+
+.list{
+  justify-content: left;
+  align-content: space-between;
+}

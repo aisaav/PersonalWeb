@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./education-umich.component.css']
 })
 export class EducationUmichComponent implements OnInit {
-
+  headerSize = '90%';
   constructor() { }
 
   ngOnInit(): void {

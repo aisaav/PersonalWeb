@@ -34,6 +34,10 @@ export class AppComponent implements OnInit, OnDestroy {
       `main_icon`,
       this.domSanitizer.bypassSecurityTrustResourceUrl(`../assets/ic_product_icon_192px.svg`)
     );
+    this.matIconRegistry.addSvgIcon(
+      'eecs_icon',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/logo-eecs-1.svg')
+    );
   }
   @HostBinding('class') componentCssClass;
 
