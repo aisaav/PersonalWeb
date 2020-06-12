@@ -68,6 +68,7 @@ import { EducationUmichComponent } from './components/extracurricular-page/educa
 import { EducationCbhsComponent } from './components/extracurricular-page/education-cbhs/education-cbhs.component';
 import { ExtracurricularShpeComponent } from './components/extracurricular-page/extracurricular-shpe/extracurricular-shpe.component';
 import { ExtracurricularMradsComponent } from './components/extracurricular-page/extracurricular-mrads/extracurricular-mrads.component';
+import {MatTreeModule} from '@angular/material/tree';
 
 
 @NgModule({
@@ -112,6 +113,7 @@ import { ExtracurricularMradsComponent } from './components/extracurricular-page
     MatToolbarModule,
     MatTooltipModule,
     MatNativeDateModule,
+    MatTreeModule
   ]
 })
 export class MaterialModule {}
