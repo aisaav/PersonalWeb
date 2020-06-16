@@ -4,7 +4,7 @@
   <header>
     <div class="profilePhoto">
       <img  class="main-page-image" src="../../../assets/headshot2.JPG" alt="headshot"
-            [class.darken-img-slight]="updateImg">
+            [class.darken-img-slight]="updateImg" [style.width.px]="width" [style.height.px]="height">
     </div>
     <section class="profileHeader">
       <mat-card-title class="mat-display-4" [style.font-size.px]="72" [style.margin-bottom.px]="0">Hello,</mat-card-title>
@@ -13,39 +13,39 @@
       <h3 class="mat-h3">I'm a current undergraduate at the University of Michigan
         double majoring in Computer Science and Cognitive Science.</h3>
     </section>
+    <section class="terminal-cards">
+      <input type="hidden" #selection>
+      <div class="terminal-container">
+        <div class="card-container">
+          <button mat-stroked-button class="card" (click)="selection.value = 'github'" tabindex="0" >
+            <span>Github</span>
+          </button>
+          <button mat-stroked-button class="card" (click)="selection.value = 'linkedIn'" tabindex="0">
+            <span>LinkedIn</span>
+          </button>
+          <button mat-stroked-button class="card"  (click)="selection.value = 'VSCO'" tabindex="0">
+            <span>VSCO</span>
+          </button>
+          <button mat-stroked-button class="card" (click)="selection.value = 'Instagram'" tabindex="0">
+            <span>Instagram</span>
+          </button>
+          <button mat-stroked-button class="card" (click)="selection.value = 'Email'" tabindex="0">
+            <span>Email</span>
+          </button>
+        </div>
+        <div class="terminal" [ngSwitch]="selection.value">
+          <a href="https://github.com/aisaav"><pre *ngSwitchDefault>github.com/aisaav</pre></a>
+          <a href="https://www.linkedin.com/in/aisaav/"><pre *ngSwitchCase="'linkedIn'">www.linkedin.com/in/aisaav/</pre></a>
+          <a href="https://vsco.co/aisaavedra/gallery"><pre *ngSwitchCase="'VSCO'">@aisaavedra</pre></a>
+          <a href="https://www.instagram.com/alex_saa/?hl=en"><pre *ngSwitchCase="'Instagram'">@alex_saa</pre></a>
+          <a href="mailto:aisaav@umich.edu"><pre *ngSwitchCase="'Email'">aisaav@umich.edu</pre></a>
+        </div>
+      </div>
+    </section>
   </header>
 
-<header>
-  <section class="terminal-cards">
-    <input type="hidden" #selection>
-    <div class="terminal-container">
-      <div class="card-container">
-        <button mat-stroked-button class="card" (click)="selection.value = 'github'" tabindex="0">
-          <span>Github</span>
-        </button>
-        <button mat-stroked-button class="card" (click)="selection.value = 'linkedIn'" tabindex="0">
-          <span>LinkedIn</span>
-        </button>
-        <button mat-stroked-button class="card"  (click)="selection.value = 'VSCO'" tabindex="0">
-          <span>VSCO</span>
-        </button>
-        <button mat-stroked-button class="card" (click)="selection.value = 'Instagram'" tabindex="0">
-          <span>Instagram</span>
-        </button>
-        <button mat-stroked-button class="card" (click)="selection.value = 'Email'" tabindex="0">
-          <span>Email</span>
-        </button>
-      </div>
-      <div class="terminal" [ngSwitch]="selection.value">
-        <a href="https://github.com/aisaav"><pre *ngSwitchDefault>github.com/aisaav</pre></a>
-        <a href="https://www.linkedin.com/in/aisaav/"><pre *ngSwitchCase="'linkedIn'">www.linkedin.com/in/aisaav/</pre></a>
-        <a href="https://vsco.co/aisaavedra/gallery"><pre *ngSwitchCase="'VSCO'">@aisaavedra</pre></a>
-        <a href="https://www.instagram.com/alex_saa/?hl=en"><pre *ngSwitchCase="'Instagram'">@alex_saa</pre></a>
-        <a href="mailto:aisaav@umich.edu"><pre *ngSwitchCase="'Email'">aisaav@umich.edu</pre></a>
-      </div>
-    </div>
-  </section>
-</header>
+
+
   <footer>
     <div class="scroll-text">
       <img src="../../../assets/scroll-down-text.svg" alt="Scroll down to learn more" width="200px" height="100px"

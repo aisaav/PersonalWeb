@@ -1,5 +1,5 @@
 .main{
-  padding-left: 20px;
+  padding-left: 3%;
 }
 .background{
   position: absolute;
@@ -13,14 +13,13 @@
   box-sizing: content-box;
 }
 .main-page-image{
-  height: auto;
-  max-width: 100%;
+  object-fit: scale-down;
   border-radius: 3px;
 }
 
 .card-container > *:not(.circle-link) ,
 .terminal {
-  width: 100%;
+  width: 80%;
 }
 
 svg#clouds {
@@ -55,27 +54,26 @@ header .profilePhoto {
   float: left;
   clear: both;
   max-width: 500px;
+  object-fit: scale-down;
   margin-right: 3%;
 }
 
 header .profileHeader {
   text-align: left;
+}
+
+
+.terminal-cards{
   display: table;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-header .terminal-cards{
-  align-self: center;
-  padding-right: 2%;
-}
-
-header .terminal-container{
+ .terminal-container{
   position: relative;
   display: table;
-  width:100%;
-  max-width: 800px;
-  margin-right: auto;
-  margin-left: auto;
+   width: 100%;
+  max-width: 450px;
 }
 
 
@@ -119,7 +117,10 @@ header .terminal-container{
   display: grid;
   position: relative;
   grid-template-columns: auto auto auto auto auto;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .card {
