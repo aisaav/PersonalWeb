@@ -12,14 +12,6 @@
     <h3 mat-line>
       Background to Project
     </h3>
-    <mat-card-subtitle mat-line>Genetic algorithms</mat-card-subtitle>
-    <p mat-line>
-      <span>
-        A form of supervised machine learning.
-        An optimal solution is produced through controlled natural selection, this approach is useful in exploring
-        multiple possible outcomes.
-      </span>
-    </p>
     <mat-card-subtitle mat-line>Caenorhabditis elegans (C. elegans)</mat-card-subtitle>
     <p mat-line>
       <span>
@@ -46,6 +38,29 @@
       <br>P(Ā) - probability of not A
       <br>Denominator usually referred to as normalizing term
     </span>
+    </p>
+    <mat-card-subtitle mat-line>Genetic algorithms and Motivation</mat-card-subtitle>
+    <p mat-line>
+      <span>
+        A form of supervised machine learning, where the computer optimizes a solution through natural selection,
+        this selection is usually done through a “fitness” algorithm.
+        An optimal solution is produced through controlled natural selection, this approach is useful in exploring
+        multiple possible outcomes.
+      </span>
+    </p>
+    <p mat-line>
+      <span>
+        For the purposes of this project, the “population” created comprised of the computers’ guesses for the states
+        of a worm’s movement. This algorithm then “breeds” the guesses using a fitness algorithm that ranks the guesses
+        using Bayesian inferencing and positional data, allowing the system to update the “population” accordingly.
+        The goal was to create a system that can predict states of worm behavior with at least an 80% accuracy rate.
+        If successful, the model can be adapted for more than three states and be used for other types of worm behavior.
+        Furthermore, in creating a functional model using positional time series data would be a breakthrough in
+        creating a system that analyzes worm behavior solely based on coordinates.
+        The proposed method for this portion involves developing a genetic algorithm than uses Bayesian probabilities
+        and a continuity measure to determine fitness. The idea being that with a good fitness function,
+        genetic algorithms can perform with great accuracy.
+      </span>
     </p>
   </mat-list-item>
   <mat-list-item role="listitem">

@@ -1,29 +1,96 @@
 <h2 class="mat-h1">
+  The Effect of Sampling Ratio on Bootstrapping Diffusion
 </h2>
 <div class="general-description">
   <p class="mat-body-1">
+    Worked with Dr. Sachin Shanbhag under the Department of Scientific Computing
   </p>
   <mat-divider></mat-divider>
 </div>
 <div>
   <mat-list-item role="listitem">
     <h3 mat-line>
+      Background to Project
+    </h3>
+    <mat-card-subtitle mat-line>Molecular Dynamics</mat-card-subtitle>
+    <p mat-line>
+      <span>
+        Molecular dynamics is a computer simulation method for studying the movement of atoms in a particular medium.
+        The benefit of using a molecular dynamic simulation is that it tracks different aspects of the atoms and can
+        run for specific, controlled amounts of time. This allows for an accurate representation of how the atoms
+        interact under specified conditions. Our project used Large-scale Atomic/Molecular Massively Parallel Simulator
+        (LAMMPS) molecular dynamics program.
+      </span>
+    </p>
+    <mat-card-subtitle mat-line>Diffusion, Fick's Law & the Diffusion Coefficient</mat-card-subtitle>
+    <p mat-line>
+      <span>
+        The movement of particles from a region of high concentration to a region of low concentration is known as
+        diffusion. In determining the diffusivity of a medium, the movement of atoms under set conditions is analyzed.
+      </span>
+    </p>
+    <p mat-line>
+      <span>
+        Fick’s law, shown below, states that the concentration gradient is directly proportional to the mass per unit
+        time of an area and through this a diffusion constant can be derived.
+        <br> 𝑛=−D𝛻𝑐
+      </span>
+    </p>
+    <mat-card-subtitle mat-line>Bootstrapping and Motivation</mat-card-subtitle>
+    <p mat-line>
+      <span>
+        Bootstrapping is a statistical method reliant on computational calculations. Bootstrapping is the process of
+        taking a randomized sample and developing new samples to calculate measures of accuracy such as confidence intervals.
+        Bootstrapping takes a random sample of a predetermined size, treats this sample as a representative of the
+        population it is trying to test. Once the original sample is taken, random elements from the original sample
+        are chosen with replacement until the new sample becomes the predetermined size. Bootstrapping then continues to
+        do this for N amount of times until it can quantify or produce some accuracy label for an estimate it makes.
+      </span>
+    </p>
+    <p mat-line>
+    <span>
+      When measuring the error of a diffusion constant, multiple tests are required whether it be done in a simulation
+      or in a laboratory. The time, cost and difficulty of performing multiple tests has prompted the search of an
+      alternate method: bootstrapping. Since the trajectories of nearby atoms are correlated, sampling a group of
+      atoms could be used to better describe all the atoms. Thus, using bootstrapping on different atom percentages
+      could potentially solve the issue of running multiple simulations and produce desired results.
+    </span>
+    </p>
+    <p mat-line>
+    <span>
+      Bootstrapping produces the best results when the original sample is random and independent:
+      this causes an issue with testing atoms since their movements are correlated. Therefore, bootstrapping on a
+      varying percentage and varying simulation time could determine how reliable this sampling method is in this context.
+    </span>
+    </p>
+  </mat-list-item>
+  <mat-list-item role="listitem">
+    <h3 mat-line>
+      My Contribution
     </h3>
   </mat-list-item>
   <p mat-line>
     <span>
+      Developed a program that automated running of 200 simulations for each predetermined duration in LAMMPS and
+      documented how atoms behaved in the simulator. I then averaged these samples to determine the 'true' diffusion
+      coefficient for each duration. Using this output, I developed a second program dedicated to bootstrapping
+      different sample sizes (12.5%, 25%, 50%, 75%, and 100%) for the both durations. For each sample size, 200
+      bootstraps were computed producing a diffusion coefficient and a margin of error to create a confidence interval
+      for each bootstrap run. The third program I developed graphed the results and determined if the 'true' diffusion
+      coefficient was within the confidence intervals the bootstrapping gave. The figure below shows a walkthrough of the
+      overall process.
     </span>
   </p>
   <p mat-line>
     <span>
+      Scattered results on duration and sample size prompt for additional research to fully determine effectiveness of
+      bootstrapping for this purpose.
     </span>
   </p>
   <p mat-line>
     <span>
-    </span>
-  </p>
-  <p mat-line>
-    <span>
+      Technologies used: Python (Libraries were used for automation of processes and documentation- Panda Arrays, Numpy,
+      etc.), LAMMPS (Used for molecular dynamics simulations)
     </span>
   </p>
   <p mat-line>
@@ -32,26 +99,21 @@
   </p>
   <mat-list-item role="listitem">
     <h3 mat-line>
+      Young Scholars Program (YSP)
     </h3>
     <p mat-line>
       <span>
+        Program of 40 high school students selected from the entire state of Florida.
+        Presented findings and conclusions through a self-made scientific research poster to Florida State's faculty and
+        program managers. See Poster for more information.
       </span>
     </p>
     <p mat-line>
       <span>
+        Also wrote a formal research paper to submit to program managers and the professor I worked under. In the paper,
+        I elaborated more about the research project as a whole and my contributions. See Paper for more information.
       </span>
     </p>
   </mat-list-item>
-  <mat-list-item role="listitem">
-    <h3 mat-line>
-    </h3>
-    <p mat-line>
-      <span>
-      </span>
-    </p>
-    <p mat-line>
-      <span>
-      </span>
-    </p>
-  </mat-list-item>
+
 </div>
