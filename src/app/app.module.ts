@@ -49,26 +49,28 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
 import { AboutPageComponent } from './components/about-page/about-page.component';
-import { ExtracurricularPageComponent } from './components/extracurricular-page/extracurricular-page.component';
+import { ExtracurricularPageComponent } from './components/interests/extracurricular-page/extracurricular-page.component';
 import { ProfessionalPageComponent } from './components/professional-page/professional-page.component';
-import { HobbiesInterestsPageComponent } from './components/hobbies-interests-page/hobbies-interests-page.component';
 import { ProfessionalQuickenComponent } from './components/professional-page/professional-quicken/professional-quicken.component';
 import { ProfessionalAmexComponent } from './components/professional-page/professional-amex/professional-amex.component';
-import { ProfessionalResearchMradsComponent } from './components/professional-page/professional-research-mrads/professional-research-mrads.component';
-import { ProfessionalResearchYspComponent } from './components/professional-page/professional-research-ysp/professional-research-ysp.component';
+import { ProfessionalResearchMradsComponent } from './components/research-experience/professional-research-mrads/professional-research-mrads.component';
+import { ProfessionalResearchYspComponent } from './components/research-experience/professional-research-ysp/professional-research-ysp.component';
 import { ProfessionalTechnicalSkillsComponent } from './components/professional-page/professional-technical-skills/professional-technical-skills.component';
 import { ProfessionalTechnicalProjectsAndSetupsComponent } from './components/professional-page/professional-technical-projects-and-setups/professional-technical-projects-and-setups.component';
-import { HobbyArtComponent } from './components/hobbies-interests-page/hobby-art/hobby-art.component';
-import { HobbyFitnessComponent } from './components/hobbies-interests-page/hobby-fitness/hobby-fitness.component';
-import { HobbyMusicComponent } from './components/hobbies-interests-page/hobby-music/hobby-music.component';
-import { InterestComputationalCognitionComponent } from './components/hobbies-interests-page/interest-computational-cognition/interest-computational-cognition.component';
-import { InterestAiApproachesComponent } from './components/hobbies-interests-page/interest-ai-approaches/interest-ai-approaches.component';
-import { InterestAiApplicationsComponent } from './components/hobbies-interests-page/interest-ai-applications/interest-ai-applications.component';
-import { EducationUmichComponent } from './components/extracurricular-page/education-umich/education-umich.component';
-import { EducationCbhsComponent } from './components/extracurricular-page/education-cbhs/education-cbhs.component';
-import { ExtracurricularShpeComponent } from './components/extracurricular-page/extracurricular-shpe/extracurricular-shpe.component';
-import { ExtracurricularMradsComponent } from './components/extracurricular-page/extracurricular-mrads/extracurricular-mrads.component';
+import { HobbyArtComponent } from './components/hobbies/hobby-art/hobby-art.component';
+import { HobbyFitnessComponent } from './components/hobbies/hobby-fitness/hobby-fitness.component';
+import { HobbyMusicComponent } from './components/hobbies/hobby-music/hobby-music.component';
+import { InterestComputationalCognitionComponent } from './components/interests/interest-computational-cognition/interest-computational-cognition.component';
+import { InterestAiApproachesComponent } from './components/interests/interest-ai-approaches/interest-ai-approaches.component';
+import { InterestAiApplicationsComponent } from './components/interests/interest-ai-applications/interest-ai-applications.component';
+import { EducationUmichComponent } from './components/interests/extracurricular-page/education-umich/education-umich.component';
+import { EducationCbhsComponent } from './components/interests/extracurricular-page/education-cbhs/education-cbhs.component';
+import { ExtracurricularShpeComponent } from './components/interests/extracurricular-page/extracurricular-shpe/extracurricular-shpe.component';
+import { ExtracurricularMradsComponent } from './components/interests/extracurricular-page/extracurricular-mrads/extracurricular-mrads.component';
 import {MatTreeModule} from '@angular/material/tree';
+import { HobbiesComponent } from './components/hobbies/hobbies.component';
+import { InterestsComponent } from './components/interests/interests.component';
+import { ResearchExperienceComponent } from './components/research-experience/research-experience.component';
 
 
 @NgModule({
@@ -114,7 +116,7 @@ import {MatTreeModule} from '@angular/material/tree';
     MatTooltipModule,
     MatNativeDateModule,
     MatTreeModule
-  ]
+  ],
 })
 export class MaterialModule {}
 
@@ -134,17 +136,19 @@ export class MaterialModule {}
     ProfessionalPageComponent,
       ProfessionalQuickenComponent,
       ProfessionalAmexComponent,
-      ProfessionalResearchMradsComponent,
-      ProfessionalResearchYspComponent,
       ProfessionalTechnicalSkillsComponent,
       ProfessionalTechnicalProjectsAndSetupsComponent,
-    HobbiesInterestsPageComponent,
+    HobbiesComponent,
       HobbyArtComponent,
       HobbyFitnessComponent,
       HobbyMusicComponent,
+    InterestsComponent,
       InterestComputationalCognitionComponent,
       InterestAiApproachesComponent,
-      InterestAiApplicationsComponent
+      InterestAiApplicationsComponent,
+    ResearchExperienceComponent,
+      ProfessionalResearchMradsComponent,
+      ProfessionalResearchYspComponent
   ],
   imports: [
     BrowserModule,

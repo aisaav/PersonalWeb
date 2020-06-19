@@ -10,9 +10,7 @@
   z-index: -2;
 }
 
-.about-me-page{
-  align-content: center;
-}
+
 
 header{
   float: none;
@@ -24,7 +22,8 @@ header .about-header{
 
 .main{
   padding-left: 2%;
-  width:98%;
+  width:95%;
+  padding-right: 2%;
 }
 
 .content{

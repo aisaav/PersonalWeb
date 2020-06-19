@@ -1,0 +1,72 @@
+<img class="background" src="../../../assets/hobbies-interests-background.svg">
+<div class="page-container">
+  <h2 class="mat-display-4" [style.font-size.px]="52" [style.margin-bottom.px]="6">Hobbies and Interests</h2>
+  <mat-tab-group color="accent" backgroundColor="primary">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Hobbies
+      </ng-template>
+      <div class="hobbies">
+        <mat-accordion multi="true" >
+          <mat-expansion-panel expanded="true">
+            <mat-expansion-panel-header>
+              Art
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent>
+              <app-hobby-art></app-hobby-art>
+            </ng-template>
+          </mat-expansion-panel>
+          <mat-expansion-panel expanded="true">
+            <mat-expansion-panel-header>
+              Fitness
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent>
+              <app-hobby-fitness></app-hobby-fitness>
+            </ng-template>
+          </mat-expansion-panel>
+          <mat-expansion-panel expanded="true">
+            <mat-expansion-panel-header>
+              Exploring Music
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent>
+              <app-hobby-music></app-hobby-music>
+            </ng-template>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Interests
+      </ng-template>
+      <div class="interests">
+        <mat-accordion multi="true" >
+          <mat-expansion-panel expanded="true">
+            <mat-expansion-panel-header>
+              Computation and Cognition
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent>
+              <app-interest-computational-cognition></app-interest-computational-cognition>
+            </ng-template>
+          </mat-expansion-panel>
+          <mat-expansion-panel expanded="true">
+            <mat-expansion-panel-header>
+              Approaches to Artificial Intelligence
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent>
+              <app-interest-ai-approaches></app-interest-ai-approaches>
+            </ng-template>
+          </mat-expansion-panel>
+          <mat-expansion-panel expanded="true">
+            <mat-expansion-panel-header>
+              Applications of Machine Learning
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent>
+              <app-interest-ai-applications></app-interest-ai-applications>
+            </ng-template>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

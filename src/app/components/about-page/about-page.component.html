@@ -1,59 +1,126 @@
 <img class="background" src="../../../assets/about-page-background.svg" alt="" width="100%" height="100%"/>
-<div>
-  <div class="about-me-page">
-    <div class="main">
-      <header>
-        <section class="about-header">
-          <h1 class="mat-display-1">About Me</h1>
-        </section>
-      </header>
-      <div class="content">
-        <h2 class="mat-body-1">
-          I am Colombian-American
-        </h2>
-        <h2 class="mat-body1">
-          Raised in Florida, the sunshine state.
-          <br>I now live in Ann Arbor, where I now go to school at the University of Michigan.
-        </h2>
-        <h2 class="mat-body-1">
-          At the University of Michigan, I am encouraged to combine my academic interests and find career paths that allow me to express my curiosity.
-          <br>Ultimately, this led me to change my initial thoughts on only pursuing a degree in Computer Science and to pursue a double major instead.
-          <br>After discovering Cognitive Science with an emphasis in computation it felt like an ideal second major for me.
-          <br>Through my Cognitive Science major, I embrace interdisciplinary study.
-          I see the brain as nature's best computer, and how we can learn from the brain to develop intelligent computation.
-          <br> Recently, I have become curious about applying machine learning methods that derive from human cognition to non-traditional use cases.
-        </h2>
-        <h2 class="mat-body-1">
-          I have also been painting since I was five years old.
-          <br>I enjoy painting objects with something off about them, an abnormal apple or a vase with implausible proportions.
-          It’s intentional, I am implicitly encouraging viewers to stare longer and determine why the painting is causing them visual confusion.
-          <br>I see how viewers spend time putting themselves in the artist's shoes to understand their point of view;
-          I find this way of thinking to be similar to how we learn from the perspectives of others.
-          <br>Art has taught me how to be aware of perspective, and how to incorporate creativity and curiosity into my work.
-        </h2>
-        <h2 class="mat-body-1">
-          Feel free to continue navigating my page to learn more about me!
-        </h2>
-      </div>
-      <div class="additional">
-        <img class="arrows" src="../../../assets/about%20me%20page%20arrows.svg" />
-        <div class="social">
-          <a>
+<div class="about-me-page">
+  <div class="main">
+    <h1 class="mat-display-4" [style.font-size.px]="48" [style.margin.px]="0">About</h1>
+    <h4 class="mat-h3">Hi I'm Alexandra and here is a bit about me</h4>
+    <mat-grid-list cols="6">
+      <mat-grid-tile rowspan="1" colspan="2" [style.border-right]="'1px dashed #ddd'">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>I am Colombian - American</mat-card-title>
+          </mat-card-header>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile rowspan="1" colspan="2"  [style.border-right]="'1px dashed #ddd'">
+        <mat-card>
+          <mat-card-header><mat-card-title> I was raised in the sunshine state</mat-card-title></mat-card-header>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile rowspan="1" colspan="2"  [style.border-right]="'1px dashed #ddd'">
+        <mat-card>
+          <mat-card-header><mat-card-title>I currently live in Ann Arbor where I currently attend the University of Michigan
+          </mat-card-title></mat-card-header>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  <mat-grid-list cols="6">
 
-          </a>
-        </div>
-        <div class="hobbies-interests">
-          <a>
+    <mat-grid-tile rowspan="1" colspan="2"  [style.border-right]="'1px dashed #ddd'">
+      <mat-card>
+        <mat-card-header><mat-card-title>At Michigan</mat-card-title></mat-card-header>
+        <mat-card-content>
+          I am encouraged to combine my academic interests and find career paths that allow me to express my curiosity.
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile rowspan="1" colspan="2"  [style.border-right]="'1px dashed #ddd'">
+      <mat-card>
+        <mat-card-header><mat-card-title>Ultimately, this led me to change my initial thoughts on only pursuing a degree
+          in Computer Science
+          and to pursue a double major instead.</mat-card-title></mat-card-header>
+        <mat-card-content>
+          After discovering Cognitive Science with an emphasis in computation it felt like an ideal second major for me.
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile rowspan="1" colspan="2"  [style.border-right]="'1px dashed #ddd'">
+      <mat-card>
+        <mat-card-header><mat-card-title>Through my Cognitive Science major, I embrace interdisciplinary study.
+        </mat-card-title></mat-card-header>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+    <mat-grid-list cols="6">
+      <mat-grid-tile rowspan="1" colspan="2"  [style.border-right]="'1px dashed #ddd'">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              I see the brain as nature's best computer, and how we can learn from the brain to develop intelligent computation.
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            Recently, I have become curious about applying machine learning methods that derive from human cognition to
+            non-traditional use cases.
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile rowspan="1" colspan="2" [style.border-right]="'1px dashed #ddd'">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              I have also been painting since I was five years old.
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
 
-          </a>
-        </div>
-        <div class="professional">
-          <a>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile rowspan="1" colspan="2" [style.border-right]="'1px dashed #ddd'">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              Art has taught me how to be aware of perspective, and how to incorporate creativity and curiosity into my work.
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            I enjoy painting objects with something off about them, an abnormal apple or a vase with implausible proportions.
+            It’s intentional, I am implicitly encouraging viewers to stare longer and determine why the painting is causing them visual confusion.
+            <br>I see how viewers spend time putting themselves in the artist's shoes to understand their point of view;
+            I find this way of thinking to be similar to how we learn from the perspectives of others.
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
 
-          </a>
-        </div>
-      </div>
+
+
+
+
+
+
+  </div>
+  <div class="content">
+    <h2 class="mat-body-1">
+      Feel free to continue navigating my page to learn more about me!
+    </h2>
+  </div>
+  <div class="additional">
+    <img class="arrows" src="../../../assets/about%20me%20page%20arrows.svg" />
+    <div class="social">
+      <a>
+
+      </a>
+    </div>
+    <div class="hobbies-interests">
+      <a>
+
+      </a>
+    </div>
+    <div class="professional">
+      <a>
+
+      </a>
     </div>
   </div>
 </div>
-
