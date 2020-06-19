@@ -14,7 +14,7 @@ export class SideNavComponent implements OnInit{
   }
   getDisplayName(nav: string){
     if (nav === 'extracurricular-page'){
-      return 'Education and Extracurriculars';
+      return 'Education & Student Organizations';
     }
     else if (nav === 'professional-page'){
       return 'Industry & Technical Experience';

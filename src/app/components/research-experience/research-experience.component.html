@@ -1,1 +1,27 @@
-<p>research-experience works!</p>
+<img class="background" src="../../../assets/professional-background.svg"/>
+<div class="page-container">
+
+  <h2 class="mat-display-4" [style.font-size.px]="52" [style.margin-bottom.px]="6">Experience</h2>
+
+  <mat-tab-group color="accent" backgroundColor="primary">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Prior to Undergrad
+      </ng-template>
+      <div class="industry-experience">
+        <app-professional-research-mrads></app-professional-research-mrads>
+      </div>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Undergraduate
+      </ng-template>
+      <div class="technical-skills">
+          <app-professional-research-ysp></app-professional-research-ysp>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+
+</div>
+

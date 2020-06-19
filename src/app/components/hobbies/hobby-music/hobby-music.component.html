@@ -7,37 +7,54 @@
   </p>
   <mat-divider></mat-divider>
 </div>
-<div>
-  <mat-list-item role="listitem">
-    <h3 mat-line>
-      Listening to Music
-    </h3>
-    <p mat-line>
+<mat-accordion multi="true" >
+  <mat-expansion-panel expanded="true">
+    <mat-expansion-panel-header>
+      Nature Walks
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <mat-list-item role="listitem">
+        <h3 mat-line>
+          Listening to Music
+        </h3>
+        <p mat-line>
       <span>
         I listen to various genres of music to try and expand my horizons and hear stories from different perspectives.
         Some artists talk about society, others talk about personal growth and others just share about their
         journey. I find that listening to all these different stories helps me understand others and myself.
       </span>
-    </p>
-    <p mat-line>
+        </p>
+        <p mat-line>
       <span>
         Just as I try to understand the perspective of different music artists, I try to do the same with my peers and teammates.
       </span>
-    </p>
-  </mat-list-item>
-  <mat-list-item role="listitem">
-    <h3 mat-line>
-      Concerts
-    </h3>
-    <p mat-line>
+        </p>
+      </mat-list-item>
+    </ng-template>
+  </mat-expansion-panel>
+  <mat-expansion-panel expanded="true">
+    <mat-expansion-panel-header>
+      Rock Climbing
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <mat-list-item role="listitem">
+        <h3 mat-line>
+          Concerts
+        </h3>
+        <p mat-line>
       <span>
         I also have gone to a lot of concerts and its one of my favorite ways to consume music,
         the atmosphere definitely makes the music sound special and heartfelt.
       </span>
-    </p>
-    <p mat-line>
+        </p>
+        <p mat-line>
       <span>
       </span>
-    </p>
-  </mat-list-item>
+        </p>
+      </mat-list-item>
+    </ng-template>
+  </mat-expansion-panel>
+<div>
+
+
 </div>

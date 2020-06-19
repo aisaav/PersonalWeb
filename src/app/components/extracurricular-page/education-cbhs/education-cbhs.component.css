@@ -14,3 +14,12 @@
   justify-content: left;
   align-content: space-between;
 }
+
+.cbhs-logo{
+  float: right;
+  margin-right: 10%;
+  width: 30%;
+  height: 30%;
+  min-height: 50px;
+  min-width: 150px;
+}

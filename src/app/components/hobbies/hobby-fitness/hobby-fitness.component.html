@@ -5,37 +5,57 @@
   </p>
   <mat-divider></mat-divider>
 </div>
-<div>
-  <mat-list-item role="listitem">
-    <h3 mat-line>
+
+<mat-accordion multi="true" >
+  <mat-expansion-panel expanded="true">
+    <mat-expansion-panel-header>
       Nature Walks
-    </h3>
-    <p mat-line>
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <mat-list-item role="listitem">
+        <h3 mat-line>
+          Nature Walks
+        </h3>
+        <p mat-line>
       <span>
         I think talking walks has to be one of my favorite ways to stay active. I usually go to the Nicholas Arboretum
         on the weekends and take walks and photograph interesting sights as I see them. I usually stay out for hours
         and really try to connect with nature and clear my mind. I definitely recommend it!
       </span>
-    </p>
-  </mat-list-item>
-  <mat-list-item role="listitem">
-    <h3 mat-line>
+        </p>
+      </mat-list-item>
+    </ng-template>
+  </mat-expansion-panel>
+  <mat-expansion-panel expanded="true">
+    <mat-expansion-panel-header>
       Rock Climbing
-    </h3>
-  </mat-list-item>
-  <p mat-line>
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <mat-list-item role="listitem">
+        <h3 mat-line>
+          Rock Climbing
+        </h3>
+      </mat-list-item>
+      <p mat-line>
     <span>
       Coming to Michigan I was able to discover Rock climbing and really found it to be one of my favorite ways
       to stay active. It is a great way for me to push the limits of all parts of my body. It has also really helped
       with building confidence in what I can accomplish and helps me focus on my goals, whether that be in my everyday
       life or in ringing the bell at the top of the wall.
     </span>
-  </p>
-  <mat-list-item role="listitem">
-    <h3 mat-line>
+      </p>
+    </ng-template>
+  </mat-expansion-panel>
+  <mat-expansion-panel expanded="true">
+    <mat-expansion-panel-header>
       Yoga and Weight Training
-    </h3>
-    <p mat-line>
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <mat-list-item role="listitem">
+        <h3 mat-line>
+          Yoga and Weight Training
+        </h3>
+        <p mat-line>
       <span>
         I put these into one category because I really find that they both build off each other.
         Yoga has helped me become more flexible and strengthen my muscles against my own body weight.
@@ -43,13 +63,20 @@
         The mindset and strength I gain through yoga helps to continue to exert my body when
         lifting weights at the school gym.
       </span>
-    </p>
-    <p mat-line>
+        </p>
+        <p mat-line>
       <span>
         For when I have a busy schedule, these activities make it easy to squeeze in some activity into my day
         and unwind.
       </span>
-    </p>
-  </mat-list-item>
+        </p>
+      </mat-list-item>
+    </ng-template>
+  </mat-expansion-panel>
+</mat-accordion>
+<div>
+
+
+
 </div>
 
