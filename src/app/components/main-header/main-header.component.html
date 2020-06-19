@@ -2,12 +2,12 @@
   <mat-toolbar class="toolbar" color="primary">
     <div>
       <button mat-icon-button (click)="onMenuClick()"><mat-icon>menu</mat-icon></button>
+      <a mat-icon-button routerLink="./" routerLinkActive="true"><mat-icon svgIcon="main_icon"></mat-icon></a>
     </div>
-    <mat-icon svgIcon="main_icon"></mat-icon>
 
     <div class="icon">
       <button mat-icon-button (click)="onDisplayModeClicked()"><mat-icon>brightness_4</mat-icon></button>
-      <a mat-button routerLink="/contact-page" routerLinkActive="active"><mat-icon>mail</mat-icon>Contact</a>
+      <a mat-button routerLink="/contact-page" routerLinkActive="active">Contact</a>
     </div>
     </mat-toolbar>
 
